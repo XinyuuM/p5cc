@@ -37,7 +37,7 @@ function redrawBg() {
     if (showWtm) {
         card.fillStyle = 'rgba(255, 255, 255, 0.65)';
         card.textAlign = 'left';
-        card.fillText('skyventuree.github.io/p5cc', 30, canvas.height - 30);
+        card.fillText('p5.yuluoxk.cn', 30, canvas.height - 30);
     }
 }
 
