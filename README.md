@@ -1,23 +1,21 @@
-## Want quick access?
+## 想直接上手用？
 
-Visit: [skyventuree.github.io/p5cc](https://skyventuree.github.io/p5cc/index.html).
+简单，点这: [p5.yuluoxk.cn](http://p5.yuluoxk.cn/).
 
-# Persona 5 Calling Card Maker
+# 女神异闻录5 预告信生成器
 
-Persona 5 Calling Card Maker is a tool that allows you to create your own calling cards while remaining anonymous.
+生成预告信！
 
-Version 3 features a variety of customization options to the text over previous ancestors, all processed directly on your browser. No more server processing!
+## 使用本地网页搭建
 
-## Local webpage
+虽然你可以git clone后，打开项目目录并将“index.html”文件拖到浏览器里打开，虽然这么整可能能用，但是在“file://”协议上，一些功能可能会出亿点点小问题。
 
-While you can drag the `index.html` file into your browser and it will just work as usual, however some features is not available or broken on the `file://` protocol.
+你可以按照以下步骤快速设置一个正常功能的工具:
+0. 在您的设备上安装 [NodeJS](https://nodejs.dev) . 
+1. 打开您的cmd/终端，并且打开到项目根目录. 
+2. 输入 `npm install` 开始安装依赖. 
+3. 在终端里输入 `node app.js` 运行项目. 项目将会在 `http://localhost:4200/`运行。.
 
-You can do this quick setup to have a normally functional tool by following the steps below:
-
-0. Have [NodeJS](https://nodejs.dev) installed on your machine.
-1. Open a command prompt/terminal on your machine and change working directory to this folder. Most operating systems have the command `cd` to change directory.
-2. Begin to install the dependencies by typing `npm install` in the command prompt/terminal.
-3. Run the webpage by typing `node app.js` in the command prompt/terminal. P5CC will be available at `http://localhost:4200/`
 
 ## Credits
 
@@ -33,8 +31,5 @@ All assets are all under fair use.
 
 _Credits can also be seen on the website along with links to the original site and owners, at the bottom of the page._
 
-## Version 2 and earlier
-
-Need version 2 of this tool? I got you covered: [p5cc-python](https://github.com/sorae42/p5cc-python).
 
 
