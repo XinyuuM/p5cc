@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 
 <head>
     <meta charset="UTF-8">
@@ -8,26 +8,10 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
     <!-- Primary Meta Tags -->
-    <title>Persona 5 Calling Card Maker</title>
-    <meta name="title" content="Persona 5 Calling Card Maker">
+    <title>女神异闻录5 预告信生成器</title>
+    <meta name="title" content="女神异闻录5 预告信生成器">
     <meta name="description"
-        content="For the sake of effortlessly making a calling card. Sending your card to the darkest desire.">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://skyventuree.github.io/p5cc/index.html">
-    <meta property="og:title" content="Persona 5 Calling Card Maker">
-    <meta property="og:description"
-        content="For the sake of effortlessly making a calling card. Sending your card to the darkest desire.">
-    <meta property="og:image" content="https://github.com/skyventuree/skyventuree/raw/main/meta.png">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://skyventuree.github.io/p5cc/index.html">
-    <meta property="twitter:title" content="Persona 5 Calling Card Maker">
-    <meta property="twitter:description"
-        content="For the sake of effortlessly making a calling card. Sending your card to the darkest desire.">
-    <meta property="twitter:image" content="https://github.com/skyventuree/skyventuree/raw/main/meta.png">
+        content="制作一张属于你的预告信. 将预告信送给最黑暗的欲望.">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/editor.css">
@@ -44,9 +28,9 @@
             <img src="assets/icon.png">
         </div>
         <div id="intro-text">
-            <h2>Persona 5 Calling Card Maker</h2>
-            <p>For the sake of effortlessly making a calling card.<br>
-                Sending your card to the darkest desire.</p>
+            <h2>女神异闻录5 预告信生成器</h2>
+            <p>制作一张属于你的预告信.<br>
+                将这份预告信送给你想偷心的人吧.</p>
         </div>
     </div>
     <hr>
@@ -61,7 +45,7 @@
     </div>
 
     <button id="refresh" class="action-btn" onclick="redrawBg();redrawText()"><i
-            class="fa fa-refresh"></i>Refresh</button>
+            class="fa fa-refresh"></i>刷新</button>
 
     <hr>
 
@@ -69,14 +53,14 @@
     <div id="editor">
 
         <div id="content">
-            <label for="content">What do you want to write on the calling card?</label>
+            <label for="content">你想在预告信上写什么？</label>
             <textarea name="content" cols="30" autocomplete="off" placeholder="TAKE YOUR HEART"></textarea>
         </div>
 
         <div id="options">
             <hr class="mobile">
 
-            <p style="text-align:center">If nothing seems to happen, click <i class="fa fa-refresh"></i>Refresh.</p>
+            <p style="text-align:center">如果上面没反应 <i class="fa fa-refresh"></i>刷个新？</p>
             <div class="tab-btn" id="tab-handler">
                 <button id="option-default" data-text-option="alignment"><i class="fa fa-arrows"
                         style="transform:rotate(-10deg)"></i></button>
@@ -88,24 +72,24 @@
 
             <!-- Alignments -->
             <div class="options-tab" id="alignment">
-                <h2>Position and alignments</h2>
+                <h2>位置/对齐</h2>
                 <div id="text-options">
-                    <label for="text-align"><i class="fa fa-align-center"></i>Align text: </label>
+                    <label for="text-align"><i class="fa fa-align-center"></i>对齐 </label>
                     <select name="text-align" id="text-align" onchange="redrawBg();redrawText()"
                         style="transform:rotate(-3.5deg)">
-                        <option value="left">left</option>
-                        <option value="center" selected>center</option>
-                        <option value="right">right</option>
+                        <option value="left">左对齐</option>
+                        <option value="center" selected>中心对齐</option>
+                        <option value="right">右对齐</option>
                     </select>
                     <br><br>
 
                     <label class="cb-container">
                         <input type="checkbox" name="text-options" onclick="isMiddle=this.checked"
                             onchange="redrawText();redrawBg()" checked>
-                        <span class="checkmark"></span>Vertically aligned text
+                        <span class="checkmark"></span>垂直对齐文本
                     </label>
 
-                    <label for="text-top">or shift text from the top by</label>
+                    <label for="text-top">或者将文本从上到下移位</label>
                     <input type="number" name="text-top" id="text-top" min="0" max="2000" value="0" step="5"
                         onchange="redrawText();redrawBg()">
                     px
@@ -114,12 +98,12 @@
 
             <!-- Fonts -->
             <div class="options-tab" id="fonts">
-                <h2>Fonts</h2>
+                <h2>字体</h2>
                 <div id="font-options">
-                    <label for="font-family">Set family</label>
+                    <label for="font-family">字体</label>
                     <input type="text" name="font-family" id="font-family" value="sans-serif" placeholder="sans-serif"
                         style="font-family:sans-serif">
-                    <label for="font-size">with size of</label>
+                    <label for="font-size">字号</label>
                     <input type="number" name="font-size" id="font-size" min="80" max="240" value="120" step="2"
                         onchange="redrawBg()">
                     px.
@@ -128,15 +112,15 @@
 
             <!-- Decorations -->
             <div class="options-tab" id="decoration">
-                <h2>Text Stroke</h2>
+                <h2>边框</h2>
                 <div id="stroke">
                     <label class="cb-container">
                         <input type="checkbox" name="stroke" onclick="textStroke=this.checked" onchange="redrawText()"
                             checked>
-                        <span class="checkmark"></span>Stroke text
+                        <span class="checkmark"></span>边框
                     </label>
 
-                    <label for="stroke-width">Set width of stroke to</label>
+                    <label for="stroke-width">边框设置为</label>
                     <input type="number" name="stroke-width" id="stroke-width" min="5" max="10" value="6" step="1"
                         onchange="textStrokeWidth=this.value">
                     px.
@@ -146,21 +130,21 @@
 
             <!-- Advanced -->
             <div class="options-tab" id="advanced">
-                <h2>Logo options</h2>
+                <h2>Logo 设置</h2>
                 <div id="show-logo">
                     <label class="cb-container">
                         <input type="checkbox" name="show-logo" onclick="showLogo=this.checked" onchange="redrawBg()"
                             checked>
                         <span class="checkmark"></span>
-                        Show "Take your heart" logo
+                        展示 "Take your heart" logo
                     </label>
                 </div>
 
                 <div id="logo-size">
-                    <label for="logo-size">Scale logo by</label>
+                    <label for="logo-size">缩放logo</label>
                     <input type="number" name="logo-size" id="logo-size-option" min="0" max="10" value="1" step="0.05"
                         onchange="redrawBg()">
-                    <label for="offset">with an offset of </label>
+                    <label for="offset">，并且偏移 </label>
                     <input type="number" name="offset" id="logo-offset" min="0" max="1000" value="20"
                         onchange="redrawBg()">
                     px.
@@ -168,11 +152,11 @@
 
                 <hr>
 
-                <h2>Delay rate</h2>
+                <h2>文字动画延迟</h2>
                 <div id="delay-rate">
-                    <label for="delay-rate">Delay each text being created by</label>
+                    <label for="delay-rate">文字动画延迟</label>
                     <input type="number" name="delay-rate" min="0" max="1000" value="100" onchange="saveDelay()"> ms
-                    <p><i class="fa fa-info-circle"></i> Increase this value if you feels the page is laggy.</p>
+                    <p><i class="fa fa-info-circle"></i> 如果您感觉网页有点卡，请增大此值。</p>
                 </div>
                 
                 <!-- Watermarking -->
@@ -180,14 +164,13 @@
                     <label class="cb-container">
                         <input type="checkbox" name="showWatermark" id="showWatermark" onclick="showWtm=this.checked" onchange="redrawBg()">
                         <span class="checkmark"></span>
-                        Show watermark to this website (disabled by default now)
+                        展示本网页的水印 (默认关闭)
                     </label>
                 </div>
             </div>
 
             <br>
-            <button class="action-btn" onclick="exportCard()"><i class="fa fa-arrow-circle-o-down"></i>Download your
-                card</button>
+            <button class="action-btn" onclick="exportCard()"><i class="fa fa-arrow-circle-o-down"></i>下载你的预告信！</button>
         </div>
     </div>
 
@@ -197,6 +180,8 @@
         <p>Persona 5 © ATLUS. © SEGA. All rights reserved.</p>
         <p><a href="https://github.com/skyventuree/p5cc">Persona 5 Calling Card Maker</a> website designed and written
             by <a href="https://sorae42.github.io">sorae42</a>.</p>
+	    <p><a href="https://github.com/skyventuree/p5cc">女神异闻录5 预告信生成器</a> 简体中文网页
+		    by <a href="https://yuluoxk.cn">YuluoXK</a>.</p>
         <p>Assets used:</p>
         <ul>
             <li><a href="https://www.deviantart.com/elmind/art/Persona-5-Calling-Card-Base-676530039">Persona 5 Calling
@@ -211,9 +196,8 @@
 
     <div id="support">
         <button>
-            <a href="https://ko-fi.com/shigukk" style="text-decoration:none">
-                <i class="fa fa-coffee"></i>Buy me a coffee!
-            </a>
+            <a href="https://space.bilibili.com/31801369" style="text-decoration:none">
+                <i class="fa fa-coffee"></i>来点打赏？
         </button>
     </div>
 
